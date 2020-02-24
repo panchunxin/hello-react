@@ -53,6 +53,10 @@ class CommentInput extends Component {
     return (
       <div>
         <div onClick={() => {this.props.child()}} ref='father'>触发父组件方法</div>
+<<<<<<< HEAD
+        <div onClick={() => {this.props.childChangeFather({red: 1})}}>子组件如何改变父组件的state</div>
+=======
+>>>>>>> bd3a2f2... react-test
         <div className="comment-input">
           <div className="comment-field">
             <span className="comment-field-name">用户名：</span>

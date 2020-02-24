@@ -7,7 +7,11 @@ class CommentApp extends Component {
   constructor () {
     super()
     this.state = {
+<<<<<<< HEAD
+      content: [],
+=======
       content: []
+>>>>>>> bd3a2f2... react-test
     }
   }
   componentWillMount () {
@@ -34,11 +38,27 @@ class CommentApp extends Component {
   parent () {
     console.log('触发父组件方法成功')
   }
+<<<<<<< HEAD
+  change (value) {
+    console.log(value)
+    this.setState({value})
+    console.log(this.state)
+  }
+  render () {
+    return (
+      <div className='wrapper'>
+        {this.state.red && this.state.red == 1 ? (
+          <div>red == 1</div>
+        ) : null}
+        <CommentInput onSubmit={this.handleCommitContent.bind(this)}  child={this.parent}  childChangeFather={this.change.bind(this)}/>
+        <CommentList content={this.state.content} />
+=======
   render () {
     return (
       <div className='wrapper'>
         <CommentInput onSubmit={this.handleCommitContent.bind(this)}  child={this.parent}/>
         <CommentList content={this.state.content}/>
+>>>>>>> bd3a2f2... react-test
       </div>
     )
   }
